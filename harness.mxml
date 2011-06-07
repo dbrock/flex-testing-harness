@@ -1,0 +1,40 @@
+<Application xmlns="http://www.adobe.com/2006/mxml"
+             width="980" height="1000"
+             layout="vertical" verticalGap="0"
+             paddingLeft="0" paddingRight="0"
+             paddingTop="0" paddingBottom="0"
+             creationComplete="handle_creation_complete()">
+  <Script source="harness-script.as"/>
+  <HBox width="100%" backgroundColor="#ffffcc"
+        visible="{!connected}" includeInLayout="{!connected}"
+        paddingLeft="10" paddingRight="10"
+        paddingTop="6" paddingBottom="6">
+    <Label text="Waiting for Melomel server to come up..." fontSize="14"/>
+  </HBox>
+  <HBox width="100%" backgroundColor="#ffffcc"
+        visible="{exploring}" includeInLayout="{exploring}"
+        paddingLeft="10" paddingRight="10"
+        paddingTop="6" paddingBottom="6">
+    <Label text="The test has been paused for exploratory testing"
+           fontSize="14"/>
+    <Spacer width="100%"/>
+    <Button label="I am done exploring this state of the application"
+            click="exploring = false"/>
+  </HBox>
+  <HBox width="100%" backgroundColor="black" color="white"
+        visible="{app_loaded}" includeInLayout="{app_loaded}"
+        paddingLeft="10" paddingRight="10"
+        paddingTop="6" paddingBottom="6">
+    <Label text="Running application: " fontSize="14"/>
+    <Label text="{app_url}" fontSize="14" fontWeight="bold"/>
+  </HBox>
+  <HBox width="100%" backgroundColor="#800000" color="white"
+        visible="{app_load_failed}" includeInLayout="{app_load_failed}"
+        paddingLeft="10" paddingRight="10"
+        paddingTop="6" paddingBottom="6">
+    <Label text="Failed to load application: " fontSize="14"/>
+    <Label text="{app_load_error}" fontSize="14"/>
+  </HBox>
+  <Box id="content_box" width="100%" height="100%"
+       backgroundColor="{app_loaded ? 0xffffff : 0xcccccc}"/>
+</Application>

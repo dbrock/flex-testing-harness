@@ -1,0 +1,10 @@
+<application xmlns="http://ns.adobe.com/air/application/1.5">
+  <id>harness</id>
+  <filename>Flex Testing Harness</filename>
+  <initialWindow>
+    <content>harness.swf</content>
+    <visible>true</visible>
+    <x>100</x>
+    <y>100</y>
+  </initialWindow> 
+</application>
