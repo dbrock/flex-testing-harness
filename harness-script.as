@@ -79,6 +79,9 @@ private function unload_app() : void
   exploring = false
 }
 
+public function get app() : Object
+{ return app_loader.content["application"] }
+
 // ---------------------------------------------------------
 
 private function add_loader_listeners() : void

@@ -15,7 +15,7 @@
         visible="{exploring}" includeInLayout="{exploring}"
         paddingLeft="10" paddingRight="10"
         paddingTop="6" paddingBottom="6">
-    <Label text="The test has been paused for exploratory testing"
+    <Label text="The test has been paused for exploration."
            fontSize="14"/>
     <Spacer width="100%"/>
     <Button label="I am done exploring this state of the application"
