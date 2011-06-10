@@ -2,6 +2,8 @@ import mx.controls.SWFLoader
 
 [Bindable] public var connected : Boolean = false;
 [Bindable] public var app_url : String = null;
+[Bindable] public var app_dirname : String = null;
+[Bindable] public var app_basename : String = null;
 [Bindable] public var app_loaded : Boolean = false;
 [Bindable] public var app_load_failed : Boolean = false;
 [Bindable] public var app_load_error : String = null;
@@ -58,6 +60,9 @@ public function load_app(url : String) : void
     unload_app()
 
   app_url = url
+  app_dirname = url.replace(/[^\/]+$/, "")
+  app_basename = url.replace(/^.*\//, "")
+
   exploring = false
 
   app_loader = new SWFLoader
