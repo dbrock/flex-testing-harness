@@ -1,0 +1,3 @@
+[submodule "melomel"]
+	path = melomel
+	url = git://github.com/dbrock/melomel.git

@@ -25,7 +25,10 @@ private function handle_melomel_connected(event : Event) : void
 private function handle_melomel_disconnected(event : Event) : void
 {
   connected = false
-  unload_app()
+
+  if (app_loader)
+    unload_app()
+
   start_trying_to_connect()
 }
 
