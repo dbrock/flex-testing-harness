@@ -56,8 +56,7 @@ private var app_loader : SWFLoader = null;
 
 public function load_app(url : String) : void
 {
-  if (app_loader)
-    unload_app()
+  unload_app()
 
   app_url = url
   app_dirname = url.replace(/[^\/]+$/, "")
@@ -77,6 +76,12 @@ public function load_app(url : String) : void
 }
 
 private function unload_app() : void
+{
+  if (app_loader)
+    $unload_app()
+}
+
+private function $unload_app() : void
 {
   remove_loader_listeners()
   content_box.removeChild(app_loader)
