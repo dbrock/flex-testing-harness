@@ -9,7 +9,7 @@
         visible="{!connected}" includeInLayout="{!connected}"
         paddingLeft="10" paddingRight="10"
         paddingTop="6" paddingBottom="6">
-    <Label text="Waiting for Melomel server to come up..." fontSize="14"/>
+    <Label text="Ready." fontSize="14"/>
   </HBox>
   <HBox width="100%" backgroundColor="#ffffcc"
         visible="{exploring}" includeInLayout="{exploring}"
