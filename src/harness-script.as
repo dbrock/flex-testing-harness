@@ -4,7 +4,7 @@ import mx.controls.SWFLoader
 [Bindable] public var app_url : String = null;
 [Bindable] public var app_dirname : String = null;
 [Bindable] public var app_basename : String = null;
-[Bindable] public var app_loaded : Boolean = false;
+[Bindable] public var app_load_complete : Boolean = false;
 [Bindable] public var app_load_failed : Boolean = false;
 [Bindable] public var app_load_error : String = null;
 [Bindable] public var exploring : Boolean = false;
@@ -87,13 +87,16 @@ private function $unload_app() : void
   content_box.removeChild(app_loader)
 
   app_loader = null
-  app_loaded = false
+  app_load_complete = false
   app_load_failed = false
   exploring = false
 }
 
 public function get app() : Object
 { return app_loader.content["application"] }
+
+public function get app_loaded() : Boolean
+{ return app_load_complete && app }
 
 // ---------------------------------------------------------
 
@@ -118,7 +121,7 @@ private function remove_loader_listeners() : void
 }
 
 private function handle_load_complete(event : Event) : void
-{ app_loaded = true }
+{ app_load_complete = true }
 
 private function handle_io_error(event : IOErrorEvent) : void
 { handle_load_failed(event.text) }
