@@ -4,7 +4,9 @@
   <initialWindow>
     <content>harness.swf</content>
     <visible>true</visible>
-    <x>100</x>
-    <y>100</y>
+    <x>50</x>
+    <y>50</y>
+    <width>980</width>
+    <height>1000</height>
   </initialWindow> 
 </application>

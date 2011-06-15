@@ -1,5 +1,5 @@
 <Application xmlns="http://www.adobe.com/2006/mxml"
-             width="980" height="1000"
+             width="100%" height="100%"
              layout="vertical" verticalGap="0"
              paddingLeft="0" paddingRight="0"
              paddingTop="0" paddingBottom="0"
