@@ -23,7 +23,7 @@
   </HBox>
   <HBox width="100%" fontSize="14"
         backgroundColor="black" color="white"
-        visible="{app_loaded}" includeInLayout="{app_loaded}"
+        visible="{app_load_complete}" includeInLayout="{app_load_complete}"
         paddingLeft="10" paddingRight="10"
         paddingTop="6" paddingBottom="6">
     <Label text="Running application: "/>
