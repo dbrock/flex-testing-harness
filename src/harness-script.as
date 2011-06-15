@@ -53,12 +53,13 @@ private function try_melomel_connect() : void
 // ---------------------------------------------------------
 
 private var app_loader : SWFLoader = null;
+private var n_apps_loaded : uint = 0
 
 public function load_app(url : String) : void
 {
   unload_app()
 
-  trace("--------> Harness loading app " + url)
+  trace("--------> Harness loading app " + url + " (#" + ++n_apps_loaded + ")")
 
   app_url = url
   app_dirname = url.replace(/[^\/]+$/, "")
