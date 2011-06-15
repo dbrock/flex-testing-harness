@@ -58,6 +58,8 @@ public function load_app(url : String) : void
 {
   unload_app()
 
+  trace("--------> Harness loading app " + url)
+
   app_url = url
   app_dirname = url.replace(/[^\/]+$/, "")
   app_basename = url.replace(/^.*\//, "")
