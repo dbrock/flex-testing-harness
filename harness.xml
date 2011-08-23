@@ -1,5 +1,6 @@
-<application xmlns="http://ns.adobe.com/air/application/1.5">
+<application xmlns="http://ns.adobe.com/air/application/2.6">
   <id>harness</id>
+  <versionNumber>1</versionNumber>
   <filename>Flex Testing Harness</filename>
   <initialWindow>
     <content>harness.swf</content>
